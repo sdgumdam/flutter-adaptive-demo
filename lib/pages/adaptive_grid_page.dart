@@ -43,7 +43,7 @@ class _AdaptiveGridPageState extends State<AdaptiveGridPage> {
                 // Calculate how many columns we want depending on available space
                 int colCount = max(1, (constraints.maxWidth / 250).floor());
                 return Scrollbar(
-                  isAlwaysShown: DeviceType.isDesktop,
+                  thumbVisibility: DeviceType.isDesktop,
                   controller: _scrollController,
                   child: GridView.count(
                       controller: _scrollController,

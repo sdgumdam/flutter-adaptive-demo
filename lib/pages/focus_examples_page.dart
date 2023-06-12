@@ -1,7 +1,6 @@
 import 'package:adaptive_app_demos/global/styling.dart';
 import 'package:flextras/flextras.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 
 class FocusExamplesPage extends StatelessWidget {
@@ -78,6 +77,7 @@ class _BasicActionDetectorState extends State<BasicActionDetector> {
       actions: <Type, Action<Intent>>{
         ActivateIntent: CallbackAction<Intent>(onInvoke: (Intent intent) {
           print("Enter or Space was pressed!");
+          return null;
         }),
       },
       child: Stack(
@@ -111,6 +111,7 @@ class _ClickableActionDetectorState extends State<ClickableActionDetector> {
       actions: <Type, Action<Intent>>{
         ActivateIntent: CallbackAction<Intent>(onInvoke: (Intent intent) {
           _submit();
+          return null;
         }),
       },
       child: GestureDetector(

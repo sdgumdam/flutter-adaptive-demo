@@ -185,5 +185,6 @@ class _TargetedAction extends Action<_TargetedIntent> {
   @override
   Object? invoke(covariant _TargetedIntent intent) {
     registry.invoke(intent.intent);
+    return null;
   }
 }
